@@ -9,3 +9,14 @@ C:\Users\Suzan\Documents\GitHub\Development--Web\Week1\obj\Debug\netcoreapp2.1\W
 C:\Users\Suzan\Documents\GitHub\Development--Web\Week1\obj\Debug\netcoreapp2.1\Week1.AssemblyInfo.cs
 C:\Users\Suzan\Documents\GitHub\Development--Web\Week1\obj\Debug\netcoreapp2.1\Week1.dll
 C:\Users\Suzan\Documents\GitHub\Development--Web\Week1\obj\Debug\netcoreapp2.1\Week1.pdb
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\bin\Debug\netcoreapp2.1\Week1.deps.json
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\bin\Debug\netcoreapp2.1\Week1.runtimeconfig.json
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\bin\Debug\netcoreapp2.1\Week1.runtimeconfig.dev.json
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\bin\Debug\netcoreapp2.1\Week1.dll
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\bin\Debug\netcoreapp2.1\Week1.pdb
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\obj\Debug\netcoreapp2.1\Week1.csprojAssemblyReference.cache
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\obj\Debug\netcoreapp2.1\Week1.csproj.CoreCompileInputs.cache
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\obj\Debug\netcoreapp2.1\Week1.AssemblyInfoInputs.cache
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\obj\Debug\netcoreapp2.1\Week1.AssemblyInfo.cs
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\obj\Debug\netcoreapp2.1\Week1.dll
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week2\obj\Debug\netcoreapp2.1\Week1.pdb

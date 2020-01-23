@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week1\\Week1.csproj": {}
+    "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week2\\Week1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week1\\Week1.csproj": {
+    "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week2\\Week1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week1\\Week1.csproj",
+        "projectUniqueName": "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week2\\Week1.csproj",
         "projectName": "Week1",
-        "projectPath": "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week1\\Week1.csproj",
+        "projectPath": "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week2\\Week1.csproj",
         "packagesPath": "C:\\Users\\Suzan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week1\\obj\\",
+        "outputPath": "C:\\Users\\Suzan\\Documents\\GitHub\\Development--Web\\Week2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"

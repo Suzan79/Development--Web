@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
@@ -22,6 +23,7 @@ namespace Model
   {
     public int Id { get; set; }
     public string Title { get; set; }
+    public DateTime Release { get; set; }
     public List<Actor> Actors { get; set; }
   }
  
@@ -30,6 +32,9 @@ namespace Model
   {
     public int Id { get; set; }
     public string Name { get; set; }
+    public DateTime Birth { get; set; }
+    public string Gender { get; set; }
     public int MovieId { get; set; }
+    public Movie Movie { get; set; }
   }
 }
