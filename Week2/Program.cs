@@ -48,13 +48,12 @@ namespace Week1
                                         };
 
                 ////// foreach loop does not work for some odd reason
-                
-                // foreach (var movie in projected_movies)
-                // {
-                //     System.Console.WriteLine("{0} | {1}", movie.Title,movie.ActorsCount.ToString());
-                // }
-                // System.Console.WriteLine(projected_movies);
+                ////// because ef design was version 2.0.0 and now it's 2.1.1
 
+                foreach (var movie in projected_movies)
+                {
+                    System.Console.WriteLine("Movie: {0} | Number of actors: {1}", movie.Title, movie.ActorsCount.ToString());
+                }
             }
         }
         static void Joining()

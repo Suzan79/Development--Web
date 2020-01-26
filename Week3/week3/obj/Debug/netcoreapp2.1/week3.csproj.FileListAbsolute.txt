@@ -1,0 +1,14 @@
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\bin\Debug\netcoreapp2.1\week3.deps.json
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\bin\Debug\netcoreapp2.1\week3.runtimeconfig.json
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\bin\Debug\netcoreapp2.1\week3.runtimeconfig.dev.json
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\bin\Debug\netcoreapp2.1\week3.dll
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\bin\Debug\netcoreapp2.1\week3.pdb
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\obj\Debug\netcoreapp2.1\week3.csprojAssemblyReference.cache
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\obj\Debug\netcoreapp2.1\week3.csproj.CoreCompileInputs.cache
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\obj\Debug\netcoreapp2.1\week3.RazorAssemblyInfo.cache
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\obj\Debug\netcoreapp2.1\week3.RazorAssemblyInfo.cs
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\obj\Debug\netcoreapp2.1\week3.AssemblyInfoInputs.cache
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\obj\Debug\netcoreapp2.1\week3.AssemblyInfo.cs
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\obj\Debug\netcoreapp2.1\week3.RazorTargetAssemblyInfo.cache
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\obj\Debug\netcoreapp2.1\week3.dll
+C:\Users\Suzan\Documents\GitHub\Development--Web\Week3\week3\obj\Debug\netcoreapp2.1\week3.pdb
