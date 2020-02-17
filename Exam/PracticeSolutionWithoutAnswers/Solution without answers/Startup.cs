@@ -25,6 +25,11 @@ namespace firstChance_2nd_attempt
         {
             services.AddDbContext<LibraryContext>(
                 //TODO 5: missing code 0.5pt (note you need to connect to an sqlite database)
+                options =>
+                {
+                    options.UseSqlite("Data Source=./LibrarydB.db"); // of data source
+                }
+                /////
                 );
             services.AddMvc();
         }
