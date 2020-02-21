@@ -5,21 +5,24 @@ import * as Models from '../models'
 
 async function getAllAuthorsAndBooks(): Promise<Models.AuthorBooks[]> {
   //TODO 8: missing code 0.5pt
-    let res: Response = await fetch("./api/books/GetAuthorsAndBooks", {
-        method: "get",
-        body: null,
-        headers: { "content-type": "application/json" }
-    });
-    /////
+  var res : Promise<Models.AuthorBooks[]>;
+  fetch('localhost:5000/api/Library/GetAuthorsAndBooks')
+  .then(result => {
+    return result
+  })
+  .catch(err => {
+    console.log(err)
+  });
+  
+  //////
   return res.json()
 }
 
 //TODO 9: missing code 1pt
-componentWillMount() {
-  this.getAllAuthorsAndBooks()
+export class SimpleLibraryComponentState {
+  
 }
-/////
-
+//////
 export class SimpleLibraryComponent extends React.Component<RouteComponentProps<{}>, SimpleLibraryComponentState> {
   constructor(props: RouteComponentProps<{}>, context: any) {
     super(props, context);
@@ -29,9 +32,8 @@ export class SimpleLibraryComponent extends React.Component<RouteComponentProps<
   try_download_allAuthorsAndBooks() {
     this.setState({ ...this.state, AuthorsAndBooks: "loading" },
     //TODO 10: missing code 1pt
-    AuthorsAndBooks = getAllAuthorsAndBooks())
 
-    ///
+    //////
       )
   }
   componentWillMount() {
@@ -43,8 +45,8 @@ export class SimpleLibraryComponent extends React.Component<RouteComponentProps<
       this.state.AuthorsAndBooks == "loading" ? <div>loading...</div> :
         this.state.AuthorsAndBooks == "error" ? <div>Something went wrong while downloading...<button onClick={() => 
             //TODO 11: missing code 0.5pt
-            this.try_download_allAuthorsAndBooks
-            /////
+            getAllAuthorsAndBooks
+            //////
           }>Retry</button></div> :
           <div>
             <form>
@@ -62,6 +64,8 @@ export class SimpleLibraryComponent extends React.Component<RouteComponentProps<
                 <h4>Books</h4>
                 {a_bs.books
                   //TODO 12: missing code 0.5pt
+                  
+                  //////
                 }
 
               </div>)}
@@ -95,6 +99,8 @@ type BookComponentProps = {
 }
 export class BookComponent extends React.Component<BookComponentProps, {}> {
   //TODO 13: missing code 0.5pt
+
+  //////
 }
 
 
