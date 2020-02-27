@@ -4,23 +4,21 @@ import * as Models from '../models'
 
 
 async function getAllAuthorsAndBooks(): Promise<Models.AuthorBooks[]> {
-  //TODO 8: missing code 0.5pt
-  var res : Promise<Models.AuthorBooks[]>;
-  fetch('localhost:5000/api/Library/GetAuthorsAndBooks')
-  .then(result => {
-    return result
-  })
-  .catch(err => {
-    console.log(err)
-  });
-  
+  //DONE 8: missing code 0.5pt
+  let res = await fetch('api/Library/GetAuthorsAndBooks',
+                        { method : 'get',
+                          credentials : 'include',
+                          headers : {'content-type':'application/json'}
+                        })
   //////
   return res.json()
 }
 
-//TODO 9: missing code 1pt
-export class SimpleLibraryComponentState {
-  
+//DONE 9: missing code 1pt
+type SimpleLibraryComponentState  = {
+  AuthorsAndBooks: "loading" | Models.AuthorBooks[] | "error",
+  FilterAuthorString: string,
+  FilterBookString: string
 }
 //////
 export class SimpleLibraryComponent extends React.Component<RouteComponentProps<{}>, SimpleLibraryComponentState> {
@@ -31,8 +29,11 @@ export class SimpleLibraryComponent extends React.Component<RouteComponentProps<
 
   try_download_allAuthorsAndBooks() {
     this.setState({ ...this.state, AuthorsAndBooks: "loading" },
-    //TODO 10: missing code 1pt
-
+    //DONE 10: missing code 1pt
+    () => getAllAuthorsAndBooks()
+    .then(json => this.setState({...this.state, AuthorsAndBooks: json}))
+    .catch(e => this.setState({...this.state, AuthorsAndBooks: "error"},
+    () => console.log(e)))
     //////
       )
   }
@@ -44,8 +45,8 @@ export class SimpleLibraryComponent extends React.Component<RouteComponentProps<
     return <div>{
       this.state.AuthorsAndBooks == "loading" ? <div>loading...</div> :
         this.state.AuthorsAndBooks == "error" ? <div>Something went wrong while downloading...<button onClick={() => 
-            //TODO 11: missing code 0.5pt
-            getAllAuthorsAndBooks
+            //DONE 11: missing code 0.5pt
+            this.try_download_allAuthorsAndBooks()
             //////
           }>Retry</button></div> :
           <div>
@@ -63,8 +64,9 @@ export class SimpleLibraryComponent extends React.Component<RouteComponentProps<
                 <AuthorComponent Author={a_bs.author} />
                 <h4>Books</h4>
                 {a_bs.books
-                  //TODO 12: missing code 0.5pt
-                  
+                  //DONE 12: missing code 0.5pt
+                  .map (book => 
+                  <BookComponent Book={book}/> )
                   //////
                 }
 
@@ -98,8 +100,17 @@ type BookComponentProps = {
   Book: Models.Book
 }
 export class BookComponent extends React.Component<BookComponentProps, {}> {
-  //TODO 13: missing code 0.5pt
-
+  //DONE 13: missing code 0.5pt
+  constructor(props: BookComponentProps, context: any) {
+    super(props, context);
+    this.state = {}
+  }
+  public render() {
+    return <div>
+      {this.props.Book.title}, 
+      {this.props.Book.year}
+    </div>
+  }
   //////
 }
 
