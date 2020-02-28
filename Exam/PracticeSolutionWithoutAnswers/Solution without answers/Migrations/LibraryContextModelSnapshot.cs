@@ -55,8 +55,6 @@ namespace firstChance2ndattempt.Migrations
 
                     b.Property<int>("BookId");
 
-                    b.Property<int>("Id");
-
                     b.HasKey("AuthorId", "BookId");
 
                     b.HasIndex("BookId");

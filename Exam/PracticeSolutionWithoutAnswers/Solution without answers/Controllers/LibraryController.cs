@@ -60,39 +60,11 @@ namespace firstChance_2nd_attempt.Controllers
       }
 
     }
-
     [HttpGet("GetAuthorsAndBooks")]
     public AuthorBooks[] GetAuthorsAndBooks(){
-      //DONE,NOT CHECKED 6: missing code 1pt
-      var res = from author in _context.Authors
-                from book_author in _context.BookAuthor
-                let books =(
-                  from book in _context.Books
-                  where book_author.AuthorId == author.Id && book_author.BookId == book.Id
-                  select book
-                ).ToArray()
-                select Tuple.Create(
-                  author,
-                  books
-                );
-
-      var authorsAndBooks = new AuthorBooks[res.Count()];
-      int i = 0;
-  
-      foreach (Tuple<Author, Book[]> t in res)
-      {
-        if (res.Any(r => r.Item1 == t.Item1))
-        {
-          authorsAndBooks[i] = new AuthorBooks();
-          authorsAndBooks[i].Author = t.Item1;
-          authorsAndBooks[i].Books = t.Item2;
-          i = i + 1;
-        }
-      }
-      //////
+      //TODO 6: missing code 1pt
       return authorsAndBooks;
     }
-
     public class AuthorBooks{
       public Author Author {get;set;}
       public Book[] Books {get;set;}
