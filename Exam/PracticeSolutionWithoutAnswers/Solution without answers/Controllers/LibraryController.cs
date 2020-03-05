@@ -62,7 +62,21 @@ namespace firstChance_2nd_attempt.Controllers
     }
     [HttpGet("GetAuthorsAndBooks")]
     public AuthorBooks[] GetAuthorsAndBooks(){
-      //TODO 6: missing code 1pt
+      //DONE 6: missing code 1pt
+      var authorsAndBooks = ( from a in _context.Authors
+                              from b in _context.Books
+                              let books = (
+                                from ba in _context.BookAuthor
+                                where ba.AuthorId == a.Id && ba.BookId == b.Id
+                                select b
+                              ).ToArray()
+                              // group b by a.Id into bk
+                              select new AuthorBooks{
+                                Author = a,
+                                Books = books
+                              }
+                            ).ToArray();
+      /////
       return authorsAndBooks;
     }
     public class AuthorBooks{

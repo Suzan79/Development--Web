@@ -12,8 +12,9 @@ namespace Model
   {
     public DbSet<Book> Books { get; set; }
     public DbSet<Author> Authors { get; set; }
-
-    //TODO 1: missing code 0.5pt 
+    //DONE 1: missing code 0.5pt 
+    public DbSet<BookAuthor> BookAuthor { get; set; }
+    /////
 
     public LibraryContext(DbContextOptions<LibraryContext> options)
         : base(options)
@@ -23,7 +24,17 @@ namespace Model
       modelBuilder.Entity<BookAuthor>()
       .HasKey(t => new { t.AuthorId, t.BookId });
 
-      //TODO 2: missing code 2pt
+      //DONE 2: missing code 2pt
+      modelBuilder.Entity<BookAuthor>()
+      .HasOne(ba => ba.Book)
+      .WithMany(b => b.Authors)
+      .HasForeignKey(ba => ba.BookId);
+
+      modelBuilder.Entity<BookAuthor>()
+      .HasOne(ba => ba.Author)
+      .WithMany(a => a.Books)
+      .HasForeignKey(ba => ba.AuthorId);
+      /////
     }
 
   }
@@ -36,7 +47,17 @@ namespace Model
     public List<BookAuthor> Authors { get; set; }
   }
 
-  //TODO 3: missing class 1pt
+  //DONE 3: missing class 1pt
+  public class BookAuthor
+  {
+    public int Id { get; set; }
+    public int BookId { get; set; }
+    public Book Book { get; set; }
+    public int AuthorId { get; set; }
+    public Author Author { get; set; }
+  }
+  /////
+
 
   public class Author
   {
@@ -44,9 +65,9 @@ namespace Model
     public string Name { get; set; }
     public DateTime Birth { get; set; }
     public string Gender { get; set; }
-    //TODO 4: missing code 0.5pt
-
-
+    //DONE 4: missing code 0.5pt
+    public List<BookAuthor> Books { get; set; }
+    /////
 
   }
 }
